@@ -12,9 +12,9 @@ image = cv2.cvtColor(image_RGB, cv2.COLOR_RGB2GRAY)
 
 # Histogram is computed
 hist = cv2.calcHist([image], [0], None, [256], [0, 256], accumulate=True)
-# Nomalzed histogram
+# Histograma normalizado
 hist /= hist.sum()
-# Cumulative histogram
+# Histograma acumulado
 cumulative_hist = hist.cumsum()
 
 # Se genera una figura para mostrar la imagen y su histograma
