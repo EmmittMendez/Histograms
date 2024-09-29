@@ -50,10 +50,10 @@ ax2 = fig.add_subplot(2,2,2)
 ax3 = fig.add_subplot(2,2,3)    # Histograma de la imagen original
 ax4 = fig.add_subplot(2,2,4)    # Histograma de la imagen con contraste
 
-ax1.imshow(image_RGB, cmap='gray')
-ax1.set_title("Gray Image")
+ax1.imshow(image_RGB)
+ax1.set_title("Original Image")
 
-ax2.imshow(image_contrast, cmap='gray')
+ax2.imshow(image_contrast)
 ax2.set_title("Autocontrast Image")
 
 # ax3.plot(hist)
