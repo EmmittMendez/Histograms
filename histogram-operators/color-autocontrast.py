@@ -56,7 +56,6 @@ ax1.set_title("Gray Image")
 ax2.imshow(image_contrast, cmap='gray')
 ax2.set_title("Autocontrast Image")
 
-
 # ax3.plot(hist)
 ax3.plot(histr,color='red'), ax3.plot(histg,color='green'), ax3.plot(histb,color='blue')
 ax3.set_title("Histogram")
