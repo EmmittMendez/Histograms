@@ -25,7 +25,7 @@ image = cv2.imread(args['image'])
 image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 # Histogram is computed
-hist = cv2.calcHist([image], [0], None, [256], [0, 256])
+hist = cv2.calcHist([image_gray], [0], None, [256], [0, 256])
 # Histograma normalizado
 #hist /= hist.sum()
 # Histograma acumulado
