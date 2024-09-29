@@ -42,8 +42,10 @@ multhigh = int(M*N*(1-ahigh))
 alowp = min([i for i in range(256) if cumulative_hist[i] >= multlow])
 ahighp = max([i for i in range(256) if cumulative_hist[i] <= multhigh])
 
+dx = (amax - amin)/(ahighp - alowp)
+
 # Definimos la función lambda para el mapeo
-table_map = lambda i: amin if i <= alowp else amax if i >= ahighp else amin + ((i - alowp) * ((amax - amin) / (ahighp - alowp)))
+table_map = lambda i: amin if i <= alowp else amax if i >= ahighp else amin + ((i - alowp) * dx)
 
 # Construimos un arreglo para almacenar los valores precaclulados
 y2 = np.array([table_map(i) for i in range(256)], dtype='uint8')
